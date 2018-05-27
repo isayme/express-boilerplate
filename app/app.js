@@ -2,6 +2,7 @@ const path = require('path')
 require('app-module-path').addPath(path.resolve(__dirname, '..'))
 
 const express = require('express')
+require('express-async-errors')
 const bodyParser = require('body-parser')
 const config = require('config')
 const logger = require('app/logger')
