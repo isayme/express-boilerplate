@@ -8,9 +8,11 @@ const logger = require('app/logger')
 const partialResponse = require('express-partial-response')
 const requestID = require('express-request-id')
 const cookieParser = require('cookie-parser')
+require('app/middleware/ip')
 
 const app = express()
 
+app.set('trust proxy', false)
 app.use(require('app/middleware/logger'))
 app.use(requestID())
 app.use(cookieParser())
