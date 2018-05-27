@@ -1,7 +1,7 @@
 const config = require('config')
 const request = require('supertest')
 const assert = require('power-assert')
-const app = require('../app/app')
+const app = require('app/app')
 
 describe('cors', () => {
   it('should ok if from trusted domains', async () => {

@@ -10,6 +10,7 @@
     "node_modules",
     ".git",
     ".vscode",
-    "coverage"
+    "coverage",
+    ".nyc_output"
   ]
 }

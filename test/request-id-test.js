@@ -1,6 +1,6 @@
 const request = require('supertest')
 const assert = require('power-assert')
-const app = require('../app/app')
+const app = require('app/app')
 
 describe('request id', () => {
   it('should ok', async () => {
