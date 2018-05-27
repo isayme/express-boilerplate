@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "coveralls": "^2.13.1",
-    "mocha": "^3.5.3",
+    "mocha": "^5.2.0",
     "nodemon": "^1.12.1",
     "nyc": "^11.4.1",
     "power-assert": "^1.4.4",
