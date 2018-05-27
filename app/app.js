@@ -6,10 +6,12 @@ const bodyParser = require('body-parser')
 const config = require('config')
 const logger = require('app/logger')
 const partialResponse = require('express-partial-response')
+const requestID = require('express-request-id')
 
 const app = express()
 
 app.use(require('app/middleware/logger'))
+app.use(requestID())
 app.use(partialResponse())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
