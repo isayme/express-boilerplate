@@ -41,6 +41,7 @@
     "express": "^4.16.3",
     "express-partial-response": "^0.3.4",
     "express-request-id": "^1.4.0",
+    "i18n": "^0.8.3",
     "lodash": "^4.17.10",
     "pino": "^4.16.1",
     "request-ip": "^2.0.2"

@@ -1,4 +1,3 @@
-const requestIP = require('request-ip')
 const constants = require('app/constants')
 
 class RequestContext {
@@ -16,7 +15,7 @@ class RequestContext {
   }
 
   get ip () {
-    return requestIP.getClientIp(this.req) || constants.UnKnown
+    return this.req.ip || constants.UnKnown
   }
 
   get headers () {
@@ -66,6 +65,14 @@ class RequestContext {
     return this.req.cookies
   }
 
+  get lang () {
+    return this.req.locale
+  }
+
+  get welcome () {
+    return this.req.__('welcome')
+  }
+
   toJSON () {
     return {
       method: this.method,
@@ -78,7 +85,9 @@ class RequestContext {
       body: this.body,
       form: this.form,
       files: this.files,
-      cookies: this.cookies
+      cookies: this.cookies,
+      lang: this.lang,
+      welcome: this.welcome
     }
   }
 }

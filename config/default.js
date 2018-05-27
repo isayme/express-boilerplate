@@ -3,5 +3,8 @@ module.exports = {
   logger: {
     level: 'info'
   },
-  cors: []
+  cors: [],
+  i18n: {
+    locales: ['zh', 'en']
+  }
 }

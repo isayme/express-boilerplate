@@ -9,4 +9,3 @@ Object.defineProperty(express.request, 'ip', {
     return requestIP.getClientIp(this)
   }
 })
-
