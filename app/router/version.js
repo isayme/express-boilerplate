@@ -3,7 +3,7 @@ const router = express.Router()
 
 const pkg = require('../../package')
 
-router.get('/', function (req, res) {
+router.get('/version', function (req, res) {
   res.json({
     name: pkg.name,
     version: pkg.version,

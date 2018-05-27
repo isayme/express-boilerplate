@@ -7,18 +7,21 @@ const config = require('config')
 const logger = require('app/logger')
 const partialResponse = require('express-partial-response')
 const requestID = require('express-request-id')
+const cookieParser = require('cookie-parser')
 
 const app = express()
 
 app.use(require('app/middleware/logger'))
 app.use(requestID())
+app.use(cookieParser())
 app.use(partialResponse())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(require('./middleware/cors'))
 
-app.use('/version', require('./router/version'))
+app.use(require('./router/version'))
+app.use(require('./router/req'))
 
 app.use(require('./middleware/error-handler'))
 
