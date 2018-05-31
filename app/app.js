@@ -13,7 +13,8 @@ require('app/middleware/ip')
 
 const app = express()
 
-app.set('trust proxy', false)
+// for x-forwarded-proto
+app.set('trust proxy', true)
 app.use(cookieParser())
 app.use(require('app/middleware/logger'))
 app.use(require('app/middleware/i18n'))
