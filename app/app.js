@@ -28,6 +28,8 @@ app.use(require('./middleware/cors'))
 app.use(require('./router/version'))
 app.use(require('./router/req'))
 
+app.use('/public', express.static('public'))
+
 app.use(require('./middleware/error-handler'))
 
 const server = app.listen(config.port, () => {
